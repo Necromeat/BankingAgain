@@ -1,0 +1,8 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div>
+    <a href="Controller?command=Logout">logout</a>
+    <a href="Controller?command=login">login</a>
+     <input type="submit" value="Submit">
+    <input type="hidden" name="command" value="login">
+</div>
