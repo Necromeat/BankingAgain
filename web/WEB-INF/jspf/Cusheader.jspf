@@ -1,7 +1,9 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 
-   
+<title>${Customer.firstName} ${Customer.lastName}</title>
+<link type="text/css" rel="stylesheet" href="css/customer.css" />
+       
         <div id="container">
             <div id="wrapper">
                 <div id="header">
@@ -15,6 +17,4 @@
                 <div id="address">
                     <h1>100 Downtown<br>Big City<br>3000<br>email:info@dailybanking.dk<br>Tel.(+45)12345678<br>fax.(+45)22334455</h1>
                 </div>
-                <div id="navigation">${navigation}</div>
-
-                </div>
+             

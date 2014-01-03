@@ -1,7 +1,9 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 <h2>Navigation online</h2>
-<div>
-         <a href="Controller?command=mypage">MyPage</a>
-         <a href="Controller?command=Logout">logout</a>
-</div>
+<ul>     
+<li><a href="Controller?command=customerdetail">My Page</a></li>
+ <li>        <a href="Controller?command=customerviewaccounts">My Accounts</a></li>
+ <li>        <a href="Controller?command=logout">logout</a></li>
+</ul>
+    

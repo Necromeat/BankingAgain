@@ -6,6 +6,7 @@
 
 package commands;
 
+import DTO.CustomerDTO;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import security.SecurityRole;
@@ -15,15 +16,17 @@ import servlets.Factory;
  *
  * @author Andrew
  */
-public class CustomerMainCommand extends TargetCommand{
+public class CustomerDetailCommand extends TargetCommand{
 
-    public CustomerMainCommand(String target, SecurityRole role) {
+    public CustomerDetailCommand(String target, SecurityRole role) {
         super(target, role);
     }
      @Override
     public String execute(HttpServletRequest request) {
          request.setAttribute("date", new Date());
-         Factory.getInstance().getBankController().getCustomer();
+       CustomerDTO temp =  Factory.getInstance().getBankController().getCustomer();
+       
+            request.setAttribute("Customer", temp);
         return super.execute(request); //To change body of generated methods, choose Tools | Templates.
     }
 }

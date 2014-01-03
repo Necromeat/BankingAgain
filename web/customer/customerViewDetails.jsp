@@ -1,4 +1,4 @@
- <title>${Customer} Details</title>
+
     <%--Header--%>
     <%@include file="../WEB-INF/jspf/Cusheader.jspf" %>
     <%--/Header--%>

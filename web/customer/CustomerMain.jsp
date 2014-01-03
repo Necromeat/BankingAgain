@@ -7,15 +7,21 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <title>${Customer}</title>
+ 
     <%--Header--%>
     <%@include file="../WEB-INF/jspf/Cusheader.jspf" %>
     <%--/Header--%>
     <%--Nav--%>
-    <%@include file="../WEB-INF/jspf/CusNav.jspf" %>
+    
+    <div id="navigation">
+        <%@include file="../WEB-INF/jspf/CusNav.jspf" %>
+        </div>
+    
     <%--/Nav--%>
+    
     <%--Body--%>
-    <h1>Customer Main</h1>
+    <div><h1>Customer Main</h1></div>
+    
     <%--/Body--%>
     <%@include file="../WEB-INF/jspf/CusFooter.jspf" %>
     

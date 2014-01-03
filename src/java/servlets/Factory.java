@@ -4,11 +4,16 @@
  */
 package servlets;
 
+import commands.BankTellerAddCustomerCommand;
+import commands.BanktellerViewCustomerPageCommand;
+import commands.BanktellerAddCustomerPageCommand;
 import commands.TargetCommand;
 import commands.Command;
+import commands.CustomerDetailCommand;
+import commands.CustomerShowAccountHistory;
+import commands.CustomerViewAccountsCommand;
 import commands.LoginCommand;
 import commands.LogoutCommand;
-import commands.MyPageCommand;
 import commands.ShowLoginCommand;
 import contract.BankDataInterface;
 import java.util.HashMap;
@@ -31,6 +36,8 @@ public class Factory {
     BankDataInterface businessDataBean = lookupBusinessDataBeanRemote();
     
     private static Factory instance = new Factory();
+    private final String customerfolder="/customer/";
+    private final String bankfolder="/bankteller/";
     
     private Map<String, Command> commands = new HashMap<>();
     
@@ -39,18 +46,24 @@ public class Factory {
         //Login
           commands.put("showLogin", new ShowLoginCommand("/login/login.jsp",SecurityRole.All));
         Map<SecurityRole,String> rolePages = new HashMap<>();
-        rolePages.put(SecurityRole.Customer, "/customer/CustomerMain.jsp");
-        rolePages.put(SecurityRole.BankTeller, "/bankTeller/BankTellerMain.jsp");
-        
-        //Logout
-        commands.put("logout", new LogoutCommand("/all/main.jsp", SecurityRole.All));
+        rolePages.put(SecurityRole.Customer,  customerfolder+"CustomerMain.jsp");
+        rolePages.put(SecurityRole.BankTeller, bankfolder+"BankTellerMain.jsp");
+        rolePages.put(SecurityRole.All, "/main.jsp");
         
         commands.put("login", new LoginCommand(rolePages,"/login/login.jsp"));
+        //Logout
+        commands.put("logout", new LogoutCommand("/main.jsp", SecurityRole.All));
+        
         //All
         commands.put("main", new TargetCommand("/main.jsp",SecurityRole.All));
        //Customer
-        
+          commands.put("customerdetail", new CustomerDetailCommand(customerfolder+"customerViewDetails.jsp",SecurityRole.Customer));
+          commands.put("customerviewaccounts", new CustomerViewAccountsCommand(customerfolder+"customerViewAccounts.jsp",SecurityRole.Customer));
+          commands.put("customershowaccounthistory", new CustomerShowAccountHistory(customerfolder+"customerAccountHistory.jsp",SecurityRole.Customer));
        //BankTeller
+         commands.put("viewcustomerpage", new BanktellerViewCustomerPageCommand(bankfolder+"viewCustomer.jsp",SecurityRole.BankTeller));
+         commands.put("addcustomerpage", new BanktellerAddCustomerPageCommand(bankfolder+"addCustomer.jsp",SecurityRole.BankTeller));
+         commands.put("addcustomer", new BankTellerAddCustomerCommand(bankfolder+"addCustomer.jsp",SecurityRole.BankTeller));
         
         
     }
