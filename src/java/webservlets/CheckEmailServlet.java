@@ -24,13 +24,16 @@ public class CheckEmailServlet extends HttpServlet{
         
         PrintWriter out = response.getWriter();
         String idAsstr= request.getParameter("email");
-        String result = Factory.getInstance().getBankController().checkUserEmail(idAsstr);
-        if(result.equals("true")){
+        boolean result = Factory.getInstance().getBankController().checkUserEmail(idAsstr);
+        if(result){
             emailfree="Available";
+            
         }
     
         try{
+            
             out.println(emailfree);
+      
         } finally{
             out.close();
         }        

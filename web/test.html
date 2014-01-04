@@ -1,0 +1,58 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src='http://documentcloud.github.com/underscore/underscore-min.js'></script>
+        <script src='http://code.jquery.com/jquery-1.7.2.min.js'></script>
+        <script src='http://backbonejs.org/backbone-min.js'></script>
+        <script src='../src/java/utils/RestClient.js'></script>
+    </head>
+    <body>
+        <div id='header'></div>
+
+        <div id='sidebar'></div>
+
+        <div id='content'></div>
+
+
+        <!-- Templates -->
+        <script type='text/template' id='tpl-create'>
+            <!--
+            Put your controls to create new entity here.
+
+            Class 'new' is used to listen on events in JS code.
+            -->
+            <button class='new'>Create</button>
+        </script>
+
+        <script type='text/template' id='tpl-credittable-list-item'>
+            <!-- modify output display name for item here or change displayName in the JS model code -->
+            <a href='#<%= userIdentification %>'><%= displayName %></a>
+        </script>
+
+        <script type='text/template' id='tpl-credittable-details'>
+            <div>
+            <label>Id:</label>
+            <input type='text' id='userIdentification' name='id' value='<%= typeof(userIdentification)!== "undefined" ? userIdentification : "" %>'  />
+            <!--
+            Put your editing controls for model
+            attribute data (text fields, ...) here
+            -->
+            <!--
+            Put your controls to create new entity here.
+            Classes 'save' and 'delete' are used to listen on events in JS code.
+            -->
+            <button  class='save'>Save</button>
+            <button  class='delete'>Delete</button>
+            </div>
+        </script>
+
+
+    </body>
+</html>
