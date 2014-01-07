@@ -17,7 +17,7 @@ import javax.ws.rs.client.WebTarget;
 public class CreditChecker {
         private final WebTarget webTarget;
         private final Client client;
-        private static final String BASE_URI = "http://localhost:19174/CreditCheckerPartDue/webresources";
+        private static final String BASE_URI = "http://localhost:8080/CreditCheckerPartDue/webresources";
 
         public CreditChecker() {
             client = javax.ws.rs.client.ClientBuilder.newClient();
