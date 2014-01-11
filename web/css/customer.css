@@ -44,9 +44,15 @@ body {
     padding-top: 0px;
 }
 
-#navigation {
-    float: left;
-    width: 100%;
+#navigation li,.button {
+    display: inline;
+    padding: 4px 6px;
+    border: 1px solid green;
+    background: #ddd;
+    color: #d04;
+    margin-right: 8px;
+    border-radius:5px;
+    
 }
 /*-------------------------------main section of page-------------------------------*/
 #main {

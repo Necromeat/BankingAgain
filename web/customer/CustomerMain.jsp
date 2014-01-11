@@ -20,7 +20,11 @@
     <%--/Nav--%>
     
     <%--Body--%>
-    <div><h1>Customer Main</h1></div>
+    
+    <div id="main">
+        <h1>Customer Main</h1>
+        <p>Good to see you ${Customer.firstName}</p>
+    </div>
     
     <%--/Body--%>
     <%@include file="../WEB-INF/jspf/CusFooter.jspf" %>

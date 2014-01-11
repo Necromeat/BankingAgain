@@ -1,11 +1,8 @@
-<%-- 
-    Document   : customerAddTransfer
-    Created on : Nov 12, 2013, 11:50:40 AM
-    Author     : krismaini
---%>
 
 <%@include file="../WEB-INF/jspf/header.jspf"%>
-
+  <div id="navigation">
+    <%@include file="../WEB-INF/jspf/CusNav.jspf" %>
+    </div>
 <div id="main">
     <p id="username">${username} is currently logged in</p>
         

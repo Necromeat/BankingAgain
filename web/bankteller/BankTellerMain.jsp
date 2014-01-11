@@ -8,9 +8,13 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../WEB-INF/jspf/MainHeader.jspf"%>
-   
-     <%@include file="../WEB-INF/jspf/BankTellerNav.jspf" %>
     
-        <h1>Bank teller madafucker</h1>
+    <div id="navigation">
+        <%@include file="../WEB-INF/jspf/BankTellerNav.jspf" %>
+    </div>
+    <div id="main">
+        <h1>Bank tellers rule</h1>
+        
+    </div>
         <%@include file="../WEB-INF/jspf/MainFooter.jspf"%>
 </html>

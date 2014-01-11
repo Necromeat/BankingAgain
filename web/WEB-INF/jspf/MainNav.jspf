@@ -1,6 +1,8 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 <div>
-    <a href="Controller?command=logout">logout</a>
-    <a href="Controller?command=showLogin">login</a>
+    <ul>
+        <li><a href="Controller?command=logout">logout</a></li>
+        <li><a href="Controller?command=showLogin">login</a></li>
+    </ul>
 </div>

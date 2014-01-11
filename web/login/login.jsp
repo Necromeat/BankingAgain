@@ -3,8 +3,12 @@
 
     <%@include file="../WEB-INF/jspf/MainHeader.jspf"%>
      <title>Login</title>
-      
+        <div id="logo">
+                    <img src="images/logo.png" alt="" />
+                </div>
+     <div id="navigation">         
             <%@include file="../WEB-INF/jspf/MainNav.jspf" %>
+     </div>
      
        <div id="main">
 

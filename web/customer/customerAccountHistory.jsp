@@ -6,9 +6,12 @@
     <%@include file="../WEB-INF/jspf/taglib.jspf" %>
     <%--/Header--%>
     <%--Nav--%>
+    <div id="navigation">
     <%@include file="../WEB-INF/jspf/CusNav.jspf" %>
+    </div>
     <%--/Nav--%>
     <%--Body--%>
+    <div id="main">
    <div id="basicPanel">
         <table>
             <caption>${customer.firstName}&nbsp;-&nbsp;</caption>
@@ -27,5 +30,6 @@
             </c:forEach>
         </table>
     </div>
+            </div>
     <%--/Body--%>
     <%@include file="../WEB-INF/jspf/CusFooter.jspf" %>

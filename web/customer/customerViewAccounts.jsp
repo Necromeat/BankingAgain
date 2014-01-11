@@ -3,8 +3,10 @@
     <%@include file="../WEB-INF/jspf/Cusheader.jspf" %>
     <%@include file="../WEB-INF/jspf/taglib.jspf" %>
     <%--/Header--%>
-    <%--Nav--%>
+    <%--Nav--%> 
+    <div id="navigation">
     <%@include file="../WEB-INF/jspf/CusNav.jspf" %>
+    </div>
     <%--/Nav--%>
     <%--Body--%>
     <div id="basicPanel">
