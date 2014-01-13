@@ -60,6 +60,7 @@ public class Factory {
           commands.put("customerdetail", new CustomerDetailCommand(customerfolder+"customerViewDetails.jsp",SecurityRole.Customer));
           commands.put("customerviewaccounts", new CustomerViewAccountsCommand(customerfolder+"customerViewAccounts.jsp",SecurityRole.Customer));
           commands.put("customershowaccounthistory", new CustomerShowAccountHistory(customerfolder+"customerAccountHistory.jsp",SecurityRole.Customer));
+          commands.put("Chat", new CustomerDetailCommand(customerfolder+"customerChatPage.jsp",SecurityRole.Customer));
        //BankTeller
          commands.put("viewcustomerpage", new BanktellerViewCustomerPageCommand(bankfolder+"viewCustomer.jsp",SecurityRole.BankTeller));
          commands.put("addcustomerpage", new BanktellerAddCustomerPageCommand(bankfolder+"addCustomer.jsp",SecurityRole.BankTeller));

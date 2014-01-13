@@ -4,6 +4,7 @@
 <ul>     
 <li><a href="Controller?command=customerdetail">My Page</a></li>
  <li>        <a href="Controller?command=customerviewaccounts">My Accounts</a></li>
+ <li>        <a href="Controller?command=Chat">Chat</a></li>
  <li>        <a href="Controller?command=logout">logout</a></li>
  <li>        Customer Navigation</li>
 </ul>

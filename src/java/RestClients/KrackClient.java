@@ -6,24 +6,35 @@
 
 package RestClients;
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLContext;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.WebTarget;
 
 /**
+ * Jersey REST client generated for REST resource:PersonFacadeREST
+ * [entiti.person]<br>
+ * USAGE:
+ * <pre>
+ *        KrackClient client = new KrackClient();
+ *        Object response = client.XXX(...);
+ *        // do whatever with response
+ *        client.close();
+ * </pre>
  *
  * @author Andrew
  */
-public class CreditChecker {
 
+   public class KrackClient {
 
         private WebTarget webTarget;
         private Client client;
-        private static final String BASE_URI = "http://localhost:8080/DailyBankingCreditChecker/webresources";
+        private static final String BASE_URI = "http://localhost:8080/KrakWebRest/webresources";
 
-        public CreditChecker() {
+        public  KrackClient() {
             client = javax.ws.rs.client.ClientBuilder.newClient();
-            webTarget = client.target(BASE_URI).path("entity.credittable");
+            webTarget = client.target(BASE_URI).path("entiti.person");
         }
 
         public void remove(String id) throws ClientErrorException {
@@ -90,8 +101,8 @@ public class CreditChecker {
             client.close();
         }
     }
-      
+
     
- 
+    
     
 

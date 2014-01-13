@@ -1,6 +1,6 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-
+<%@include file="header.jspf" %>
 <title>${Customer.firstName} ${Customer.lastName}</title>
 <link type="text/css" rel="stylesheet" href="css/customer.css" />
        

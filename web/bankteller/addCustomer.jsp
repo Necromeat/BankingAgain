@@ -25,15 +25,14 @@
                     }
                 }
 
-            }
-
-
             });
+
+
 
 
            $("#fillInAddress").click(function() {
                 $.ajax({
-                    url: "AutofillAddressCommand",
+                    url: "AutofillAddress",
                     data: "phone=" + $("#phone").val(),
                     cache: false,
                     dataType: "json",
@@ -55,13 +54,14 @@
 
 
 
-        });
+        
+        
+            });
 
         function CustomerReady(data) {
             $("#CutstomerForm").html(data);
 
-        }
-        ;
+        };
 
         function dataReady(data) {
             alert(data.address);
